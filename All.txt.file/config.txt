@@ -1,0 +1,12 @@
+# config.py
+# -*- coding: utf-8 -*-
+from models import Bot
+
+BOTS = [
+    Bot("192.168.39.53",  "kali", "kali", "Bot-1", "Attack"),
+    Bot("192.168.39.32",  "kali", "kali", "Bot-2", "Attack"),
+    Bot("192.168.39.21",  "kali", "kali", "Bot-3", "Attack"),
+    Bot("192.168.39.204",  "kali", "kali", "Bot-4", "Attack"),
+    Bot("192.168.39.189",  "kali", "kali", "Bot-5", "Attack"),
+    Bot("192.168.39.61",  "kali", "kali", "Bot-6", "Normal"),  # Designated as Normal node
+]

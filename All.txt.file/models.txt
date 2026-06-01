@@ -1,0 +1,22 @@
+# models.py
+# -*- coding: utf-8 -*-
+from PySide6.QtCore import Signal, QObject
+
+class Bus(QObject):
+    log = Signal(str)
+    progress = Signal(int)
+    countdown = Signal(int)
+    status = Signal(str)
+    metrics = Signal(dict)
+
+class Bot:
+    def __init__(self, host: str, user: str, password: str, name: str, role: str = "Attack"):
+        self.host = host
+        self.user = user
+        self.password = password
+        self.name = name
+        self.role = role  # "Attack" หรือ "Normal"
+
+        # alias เพื่อให้ไฟล์อื่นใช้ได้
+        self.ip = host        # ให้เรียก bot.ip ได้
+        self.status = role    # ให้เรียก bot.status ได้
